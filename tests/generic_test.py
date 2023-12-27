@@ -2,7 +2,7 @@ from antlr4 import FileStream, CommonTokenStream
 from dejetex.DejeTexLexer import DejeTexLexer
 from dejetex.DejeTex import DejeTex
 from dejetex.DejeTexVisitor import DejeTexVisitor
-
+P
 
 def generic_test(inner, name):
     input_filename = f"./tests/deje-tests/{name}.deje"
