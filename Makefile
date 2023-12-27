@@ -41,17 +41,14 @@ SRCDIR = dejetex
 PARSER_FILES = \
 	${SRCDIR}/${GRAMMAR}Lexer.interp \
 	${SRCDIR}/${GRAMMAR}Lexer.tokens \
-	${SRCDIR}/${GRAMMAR}Parser.py \
+	${SRCDIR}/${GRAMMAR}.py \
 	${SRCDIR}/${GRAMMAR}.interp \
 	${SRCDIR}/${GRAMMAR}Lexer.py \
 	${SRCDIR}/${GRAMMAR}Listener.py \
 	${SRCDIR}/${GRAMMAR}Visitor.py \
 	${SRCDIR}/${GRAMMAR}.tokens
 
-# ${PARSER_FILES}: venv ${ANTLR} ${GRAMMAR}.g4
-${PARSER_FILES}: venv ${GRAMMAR}.g4
-
-run: venv ${GRAMMAR}.g4 ${GRAMMAR}Lexer.g4
+${PARSER_FILES}: venv ${GRAMMAR}.g4 ${GRAMMAR}Lexer.g4
 	${VENV} antlr4 \
 	-v ${ANTLR_VERSION} \
 	-o ${SRCDIR} \
@@ -59,7 +56,7 @@ run: venv ${GRAMMAR}.g4 ${GRAMMAR}Lexer.g4
 	-Dlanguage=Python3 \
 	${GRAMMAR}Lexer.g4 ${GRAMMAR}.g4
 
-test: run
+test: ${PARSER_FILES}
 	${PY} -m pytest --capture=no
 
 tree: venv
