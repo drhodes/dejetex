@@ -158,3 +158,13 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+
+dejetex/DejeTex.interp
+dejetex/DejeTexLexer.interp
+dejetex/DejeTexLexer.py
+dejetex/DejeTexLexer.tokens
+dejetex/DejeTexListener.py
+dejetex/DejeTex.py
+dejetex/DejeTex.tokens
+dejetex/DejeTexVisitor.py
