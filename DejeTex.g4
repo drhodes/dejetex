@@ -7,26 +7,25 @@ options {
 }
 
 program
-    : stmt+ EOF
+    : stmt* EOF
     ;
 
 stmt: expr 
     | env
     ;
 
-env : begin (stmt)* end ;
-
-expr: ID
-    | INT
+expr: INT
     | WORD
+    | ID
     | NEWLINE
     | LCURLY expr RCURLY
     | expr binop expr
     | cmd
     ;
 
-cmd : CMD (LCURLY stmt RCURLY)* ;
+env : begin (stmt)* end ;
 
+cmd : CMD (LCURLY stmt* RCURLY)* ;
 
 begin : BEGIN LCURLY ID RCURLY ;
 end : END LCURLY ID RCURLY ;

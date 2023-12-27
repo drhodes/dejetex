@@ -37,7 +37,7 @@ UNDERSCORE : '_' ;
 CMD : [\\][a-zA-Z]+ ;
 ID: [a-zA-Z][a-zA-Z0-9']+ ;
 INT : [0-9]+ ;
-WORD : [a-zA-Z0-9\\.]+ ;
+WORD : [a-zA-Z0-9\\.,:()]+ ;
 WS: [ \t\n\r\f]+ -> channel(WHITESPACE_CHANNEL) ;
 
 PERCENT : '%' ;
