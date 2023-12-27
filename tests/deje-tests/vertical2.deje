@@ -1,14 +1,15 @@
 % -*- latex -*-
-\beginedxvertical{Objectives}
 
-\beginedxtext{Objectives}
+\begin{edxvertical}{Objectives}
+
+\begin{edxtext}{Objectives}
 
 Lorem ipsum, consectetur.
 
 \begin{itemize}
-  
+
 \item Pellentesque vel odio, adsf
-  
+
 \item Proin, eget.
 
 \end{itemize}
@@ -17,7 +18,7 @@ Lorem ipsum, consectetur.
 
 34 videos (25 minutes 1x speed) \qquad \qquad 12 questions
 
-\endedxtext
+\end{edxtext}
 
-\endedxvertical
+\end{edxvertical}
 
