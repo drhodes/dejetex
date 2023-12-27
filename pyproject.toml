@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jedetex"
+authors = [
+    {name = "Derek Rhodes", email = "physci@gmail.com"},
+]
+description = "A proper subset of tex"
+readme = "README.rst"
+requires-python = ">=3.7"
+keywords = []
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+  "python-lsp-server",
+  "antlr4-tools",
+  "antlr4-python3-runtime==4.13.1",
+  "pytest",
+]
+
+dynamic = ["version"]
+
+[project.scripts]
+config_processor = "jedetex.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src", "tests"]
+

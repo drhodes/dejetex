@@ -1,0 +1,15 @@
+% -*- latex -*-
+
+\begin{edxvertical}
+  \begin{edxtext}
+    \include{dangerous.tex}
+    
+    \begin{unsafe}
+      all of the code in this region is ignored by the dejetex tools.
+      
+      \include{dangerous.tex}
+      
+    \end{unsafe}
+    
+  \end{edxtext}
+\end{edxvertical}

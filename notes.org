@@ -1,0 +1,2 @@
+% https://tex.stackexchange.com/questions/58269/how-does-latex-implement-environments
+% \newenvironment{edxvertical}{\textbf{Start:}}{\textbf{End.}}
