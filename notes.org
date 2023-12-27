@@ -1,2 +1,5 @@
-% https://tex.stackexchange.com/questions/58269/how-does-latex-implement-environments
-% \newenvironment{edxvertical}{\textbf{Start:}}{\textbf{End.}}
+https://tex.stackexchange.com/questions/58269/how-does-latex-implement-environments
+\newenvironment{edxvertical}{\textbf{Start:}}{\textbf{End.}}
+
+ran git-filter-repo to remove autogenned files
+https://stackoverflow.com/a/64563565/98770
