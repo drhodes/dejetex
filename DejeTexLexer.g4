@@ -8,39 +8,42 @@ channels {
 }
 
 AND : 'and' ;
-OR : 'or' ;
+OR  : 'or' ;
 NOT : 'not' ;
 
 COMMA : ',' ;
-DOT : '.' ;
-SEMI : ';' ;
+DOT   : '.' ;
+SEMI  : ';' ;
 
-LPAREN : '(' ;
-RPAREN : ')' ;
-LCURLY : '{' ;
-RCURLY : '}' ;
+LPAREN  : '(' ;
+RPAREN  : ')' ;
+LCURLY  : '{' ;
+RCURLY  : '}' ;
+LSQUARE : '[' ;
+RSQUARE : ']' ;
 
 BEGIN : '\\begin' ;
-END : '\\end' ;
+END   : '\\end'   ;
 NEWCOMMAND : '\\newcommand' ;
 
 ADD : '+' ;
-EQ : '=' ;
+EQ  : '=' ;
 MUL : '*' ;
 NEG : '-' ;
 POW : '^' ;
-
 DIV : '/' ;
 NEWLINE : '\\n' ;
 UNDERSCORE : '_' ;
 
-CMD : [\\][a-zA-Z]+ ;
-ID: [a-zA-Z][a-zA-Z0-9']+ ;
-INT : [0-9]+ ;
-WORD : [a-zA-Z0-9\\.,:()]+ ;
-WS: [ \t\n\r\f]+ -> channel(WHITESPACE_CHANNEL) ;
+CMD   : [\\][a-zA-Z]+ ;
+ID    : [a-zA-Z][a-zA-Z0-9']+ ;
+DIGIT : [0-9] ;
+INT   : [0-9]+ ;
+WORD  : [a-zA-Z0-9\\.,:()]+ ;
+WS    : [ \t\n\r\f]+ -> channel(WHITESPACE_CHANNEL) ;
 
 PERCENT : '%' ;
+HASH : '#' ;
 
 SingleLineComment : PERCENT ~[\n]* -> channel(HIDDEN);
 
