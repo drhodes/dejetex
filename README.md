@@ -33,16 +33,40 @@ environment for unchecked latex, which the tools will simply ignore.
 
 ## Benefits: 
 
-Users will enjoy futuristic ameneties such as:
+Users will enjoy ameneties such as:
 
     - syntax errors
+    - linter
+    - are environments closed? if not where?
+    - macro tracing
     
 Possible features:
 
-    - syntax highlighting
+    - treesitter integration
     - goto definition
 
 
 ## NonGoals : 
 
 Reimplementing the latex ecosystem
+
+
+----
+
+## How is this going to work?
+
+https://tex.stackexchange.com/questions/58269/how-does-latex-implement-environments
+
+Sat 30 Dec 2023 12:23:53 PM EST
+
+So, some reasonable floor needs to be established, and I believe that
+will be with `\newcommand`, but time will tell.
+
+\newenvironment{<env-name>}[<n-args>][<default>]{<begin-code>}{<end-code>} 
+
+
+\newcommand{\<env-name>}[<n-args>][<default>]{<begin-code>}
+\newcommand{\end<env-name>}{<end-code>}
+
+
+
