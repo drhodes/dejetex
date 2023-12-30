@@ -1,5 +1,27 @@
 
-# Project Goals
+# dejetex, a context free subset of latex.
+
+``` latex
+% progress
+
+\begin{edxvertical}
+  \begin{edxtext}
+    \sum{a+b}_{i=1}^{\infty}
+    Lorem ipsum 
+    \begin{itemize} 
+    \item{Pellentesque} % this is a comment
+    \item{Proin}
+    \end{itemize}
+    
+  \end{edxtext}
+\end{edxvertical}
+```
+
+
+
+
+
+## Project Goals
 
 Problem: Debugging latex can be a pain because there is no formal
 grammar for which to build tools upon. 
