@@ -14,6 +14,16 @@ def generic_test(inner, name):
 
 def cmd_test(name):
     def inner(parser):
+        tree = parser.cmd()
+        if parser.getNumberOfSyntaxErrors() > 0:
+            raise Exception("syntax errors")
+        else:
+            vinterp = DejeTexVisitor()
+            vinterp.visit(tree)
+
+
+def program_test(name):
+    def inner(parser):
         tree = parser.program()
         if parser.getNumberOfSyntaxErrors() > 0:
             raise Exception("syntax errors")
