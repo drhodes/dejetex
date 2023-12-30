@@ -11,7 +11,8 @@ def generic_test(inner, name):
     stream = CommonTokenStream(lexer)
     parser = DejeTex(stream)
     inner(parser)
-
+    
+    
 def sum_test(name):
     def inner(parser):
         tree = parser.cmd()
@@ -20,7 +21,6 @@ def sum_test(name):
         else:
             vinterp = DejeTexVisitor()
             vinterp.visit(tree)
-        
     generic_test(inner, name)
 
 

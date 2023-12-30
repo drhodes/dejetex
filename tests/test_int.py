@@ -10,7 +10,7 @@ def int_test(name):
     lexer = DejeTexLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = DejeTex(stream)
-    tree = parser.expr()
+    tree = parser.num()
     if parser.getNumberOfSyntaxErrors() > 0:
         raise Exception("syntax errors")
     else:

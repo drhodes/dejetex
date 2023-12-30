@@ -20,7 +20,7 @@ def cmd_test(name):
         else:
             vinterp = DejeTexVisitor()
             vinterp.visit(tree)
-
+    generic_test(inner, name)
 
 def program_test(name):
     def inner(parser):
@@ -30,3 +30,16 @@ def program_test(name):
         else:
             vinterp = DejeTexVisitor()
             vinterp.visit(tree)
+    generic_test(inner, name)
+
+
+def newcommand_test(name):
+    def inner(parser):
+        tree = parser.newcommand()
+        if parser.getNumberOfSyntaxErrors() > 0:
+            raise Exception("syntax errors")
+        else:
+            vinterp = DejeTexVisitor()
+            vinterp.visit(tree)
+    generic_test(inner, name)
+            
