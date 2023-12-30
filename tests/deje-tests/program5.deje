@@ -1,0 +1,13 @@
+
+% -*- latex -*-
+
+  \begin{edxtext}
+    \sum{a+b}_{i=1}^{\infty}
+    Lorem ipsum 
+    \begin{itemize} 
+    \item{Pellentesque} % this is a comment
+    \item{Proin}
+    \end{itemize}
+    
+  \end{edxtext}
+
