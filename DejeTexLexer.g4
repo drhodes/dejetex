@@ -7,10 +7,6 @@ channels {
   COMMENTS_CHANNEL
 }
 
-AND : 'and' ;
-OR  : 'or' ;
-NOT : 'not' ;
-
 COMMA : ',' ;
 DOT   : '.' ;
 SEMI  : ';' ;
@@ -25,6 +21,9 @@ RSQUARE : ']' ;
 BEGIN : '\\begin' ;
 END   : '\\end'   ;
 NEWCOMMAND : '\\newcommand' ;
+USEPACKAGE : '\\usepackage' ;
+DEF : '\\def' ;
+
 
 ADD : '+' ;
 EQ  : '=' ;
@@ -34,16 +33,20 @@ POW : '^' ;
 DIV : '/' ;
 NEWLINE : '\\n' ;
 UNDERSCORE : '_' ;
+DQUOTE : '"';
+
 
 CMD   : [\\][a-zA-Z]+ ;
 ID    : [a-zA-Z][a-zA-Z0-9']+ ;
 DIGIT : [0-9] ;
 INT   : [0-9]+ ;
-WORD  : [a-zA-Z0-9\\.,:()]+ ;
+STRING : '"' (~[\r\n"])* '"' ;
+WORD  : [a-zA-Z0-9.:]+ ;
 WS    : [ \t\n\r\f]+ -> channel(WHITESPACE_CHANNEL) ;
 
 PERCENT : '%' ;
 HASH : '#' ;
+BANG : '!';
 
 SingleLineComment : PERCENT ~[\n]* -> channel(HIDDEN);
 
