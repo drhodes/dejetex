@@ -79,4 +79,4 @@ clean-python:
 
 
 .PHONY: clean-all
-clean-all: clean-antlr clean-python
+clean: clean-antlr clean-python
