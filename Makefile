@@ -36,7 +36,7 @@ ANTLR_VERSION=4.13.1
 # Section: Parser
 
 GRAMMAR = DejeTex
-SRCDIR = dejetex
+SRCDIR = src/dejetex
 
 PARSER_FILES = \
 	${SRCDIR}/${GRAMMAR}Lexer.interp \
@@ -56,8 +56,11 @@ ${PARSER_FILES}: venv ${GRAMMAR}.g4 ${GRAMMAR}Lexer.g4
 	-Dlanguage=Python3 \
 	${GRAMMAR}Lexer.g4 ${GRAMMAR}.g4
 
-test: ${PARSER_FILES}
-	${PY} -m pytest --capture=no
+install: 
+	${VENV} pip install -e .
+
+test: ${PARSER_FILES} 
+	pytest --capture=no
 
 tree: venv
 	${VENV} antlr4-parse -v ${ANTLR_VERSION} DejeTex.g4 DejeTexLexer.g4 ${RULE} tests/deje-tests/${TESTPROG} -trace -gui
@@ -65,7 +68,7 @@ tree: venv
 
 
 run: venv ${PARSER_FILES}
-	${PY} dejetex/main.py ${INFILE}
+	${PY} src/dejetex/main.py ${INFILE}
 
 
 .PHONY: clean-antlr

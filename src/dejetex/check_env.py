@@ -1,5 +1,5 @@
-from DejeTex import DejeTex
-from DejeTexVisitor import DejeTexVisitor
+from dejetex.DejeTex import DejeTex
+from dejetex.DejeTexVisitor import DejeTexVisitor
 
 class CheckEnvVisitor(DejeTexVisitor):
     # Visit a parse tree produced by DejeTex#env.

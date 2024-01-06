@@ -7,7 +7,7 @@ name = "dejetex"
 authors = [
     {name = "Derek Rhodes", email = "physci@gmail.com"},
 ]
-description = "A proper subset of tex"
+description = "A context free proper subset of tex"
 readme = "README.rst"
 requires-python = ">=3.7"
 keywords = []
@@ -29,5 +29,8 @@ dynamic = ["version"]
 dejetex = "dejetex.main:main"
 
 [tool.setuptools.packages.find]
-where = ["src", "tests"]
+where = ["src"]
 
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = [ "--import-mode=importlib", ]

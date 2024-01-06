@@ -1,12 +1,12 @@
 import sys
 from antlr4 import *
-from DejeTexLexer import DejeTexLexer
-from DejeTex import DejeTex
-from DejeTexVisitor import DejeTexVisitor
-from check_env import check
+from dejetex.DejeTexLexer import DejeTexLexer
+from dejetex.DejeTex import DejeTex
+from dejetex.DejeTexVisitor import DejeTexVisitor
+from dejetex.check_env import check
 
-def main(argv):
-    input_stream = FileStream(argv[1])
+def main():
+    input_stream = FileStream(sys.argv[1])
     lexer = DejeTexLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = DejeTex(stream)
@@ -20,4 +20,4 @@ def main(argv):
 
         
 if __name__ == '__main__':
-    main(sys.argv)
+    main()
