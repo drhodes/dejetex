@@ -48,7 +48,8 @@ PERCENT : '%' ;
 HASH : '#' ;
 BANG : '!';
 
-SingleLineComment : PERCENT ~[\n]* -> channel(HIDDEN);
+SingleLineComment
+    : (PERCENT ~[\n]* | PERCENT [\n]) -> channel(HIDDEN);
 
 UNSAFE : '\\begin{unsafe}' .*? '\\end{unsafe}' -> channel(HIDDEN) ;
 
