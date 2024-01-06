@@ -3,3 +3,23 @@ https://tex.stackexchange.com/questions/58269/how-does-latex-implement-environme
 
 ran git-filter-repo to remove autogenned files
 https://stackoverflow.com/a/64563565/98770
+
+
+* Known working deps
+antlr4-python3-runtime==4.13.1
+antlr4-tools==0.2.1
+docstring-to-markdown==0.13
+exceptiongroup==1.2.0
+importlib-metadata==7.0.1
+iniconfig==2.0.0
+install-jdk==1.1.0
+jedi==0.19.1
+packaging==23.2
+parso==0.8.3
+pluggy==1.3.0
+pytest==7.4.4
+python-lsp-jsonrpc==1.1.2
+python-lsp-server==1.9.0
+tomli==2.0.1
+ujson==5.9.0
+zipp==3.17.0
