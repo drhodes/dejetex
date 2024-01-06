@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jedetex"
+name = "dejetex"
 authors = [
     {name = "Derek Rhodes", email = "physci@gmail.com"},
 ]
@@ -26,7 +26,7 @@ dependencies = [
 dynamic = ["version"]
 
 [project.scripts]
-config_processor = "jedetex.main:main"
+dejetex = "dejetex.main:main"
 
 [tool.setuptools.packages.find]
 where = ["src", "tests"]
