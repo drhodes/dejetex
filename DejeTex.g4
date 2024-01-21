@@ -13,18 +13,19 @@ program
 stmt
     : newcommand
     | usepackage
-    | define        
-    | expr
+    | define
     | env
+    | expr
     ;
 
 expr
     : num
     | punc
     | WORD
-    | STRING
+    | STRING   
     | ID
     | NEWLINE
+    | input_cmd
     | param
     | LCURLY expr RCURLY
     | expr binop expr   
@@ -32,7 +33,8 @@ expr
     ;
 
 punc
-    : COMMA 
+    : COMMA
+    | DOT
     | BANG
     | LPAREN
     | RPAREN
@@ -51,12 +53,12 @@ args
 
 cmd : CMD args* ;
 
-// \def <command> <parameter-text>{<replacement-text>}
-// \def\start{start="2023-09-06T15:00"}
-// def is a python keyword, so use "define" as grammar rule
-define : DEF CMD LCURLY stmt* RCURLY ;
 
+define
+    : DEF CMD param? LCURLY stmt* RCURLY
+    ;
 
+input_cmd : INPUT LCURLY expr RCURLY ;
 begin : BEGIN LCURLY ID RCURLY args*;
 end : END LCURLY ID RCURLY ;
 binop: POW | ADD | NEG | MUL | DIV | UNDERSCORE | EQ ;
