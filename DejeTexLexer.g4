@@ -22,6 +22,7 @@ BEGIN : '\\begin' ;
 END   : '\\end'   ;
 NEWCOMMAND : '\\newcommand' ;
 USEPACKAGE : '\\usepackage' ;
+INPUT : '\\input' ;
 DEF : '\\def' ;
 
 
@@ -51,5 +52,5 @@ BANG : '!';
 SingleLineComment
     : (PERCENT ~[\n]* | PERCENT [\n]) -> channel(HIDDEN);
 
-UNSAFE : '\\begin{unsafe}' .*? '\\end{unsafe}' -> channel(HIDDEN) ;
+UNSAFE : '\\begin' WS? '{' WS? 'unsafe' WS? '}' .*? '\\end' WS? '{' WS? 'unsafe' WS? '}' -> channel(HIDDEN) ;
 
