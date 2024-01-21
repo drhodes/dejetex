@@ -31,6 +31,16 @@ def program_test(name):
             vinterp = DejeTexVisitor()
             vinterp.visit(tree)
     generic_test(inner, name)
+    
+def input_test(name):
+    def inner(parser):
+        tree = parser.input_cmd()
+        if parser.getNumberOfSyntaxErrors() > 0:
+            raise Exception("syntax errors")
+        else:
+            vinterp = DejeTexVisitor()
+            vinterp.visit(tree)
+    generic_test(inner, name)
 
 
 def newcommand_test(name):

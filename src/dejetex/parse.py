@@ -6,8 +6,8 @@ from dejetex.DejeTexVisitor import DejeTexVisitor
 from dejetex.check_env import check
 from dejetex.input_pass import input_pass
 
-def main():
-    input_stream = FileStream(sys.argv[1])
+def parse(fname):
+    input_stream = FileStream(fname)
     lexer = DejeTexLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = DejeTex(stream)
@@ -19,6 +19,3 @@ def main():
         # vinterp.visit(tree)
         check(tree, tree)
         input_pass(tree, tree)
-        
-if __name__ == '__main__':
-    main()
