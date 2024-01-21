@@ -160,11 +160,11 @@ cython_debug/
 #.idea/
 
 
-dejetex/DejeTex.interp
-dejetex/DejeTexLexer.interp
-dejetex/DejeTexLexer.py
-dejetex/DejeTexLexer.tokens
-dejetex/DejeTexListener.py
-dejetex/DejeTex.py
-dejetex/DejeTex.tokens
-dejetex/DejeTexVisitor.py
+src/dejetex/DejeTex.interp
+src/dejetex/DejeTexLexer.interp
+src/dejetex/DejeTexLexer.py
+src/dejetex/DejeTexLexer.tokens
+src/dejetex/DejeTexListener.py
+src/dejetex/DejeTex.py
+src/dejetex/DejeTex.tokens
+src/dejetex/DejeTexVisitor.py
