@@ -8,3 +8,5 @@ def test_program5(): program_test("program5")
 def test_program6(): program_test("program6")
 def test_program7(): program_test("program7")
 def test_unsafe(): program_test("program-unsafe")
+
+def test_Vectors_and_Derivatives(): program_test("jf100A")
