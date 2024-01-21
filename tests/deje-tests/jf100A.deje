@@ -1,0 +1,38 @@
+% -*- latex -*-
+\documentclass[12pt]{article}
+\usepackage{edXpsl}	% edX
+\usepackage{amsmath, amsthm, amsfonts, amssymb, color, mathrsfs, comment}
+\usepackage{cancel}
+
+% ------------------------------------------
+\parindent=0pt
+\parskip=1ex
+
+\begin{document}
+% -----------------------------------------------%
+\input{100A_macros.tex}
+
+\begin{edXcourse}{JF-100A}{Real Analysis} [
+  semester="2025_Spring"
+  info_sidebar_name="Related Links"
+  start="2025-09-04T15:00"
+  end="2025-12-30T20:00"
+  display_coursenumber="JF100A"
+  course_organization="jf-math"
+  ]
+  
+  \begin{edXchapter}{Introduction}[url_name="intro"]
+    \def\edxbaseoutputname{intro}
+    \begin{edxsequential}{Introduction to the OpenEdx platform}{}
+      \input{intro/intro.tex}
+      \input{intro/practice.tex}
+    \end{edxsequential}
+    
+    \def\edxbaseoutputname{0A}
+    \begin{edxsequential}{0A}{}
+      \input{deje-src/0A.tex}
+    \end{edxsequential}
+  \end{edXchapter}
+  
+\end{edXcourse}
+\end{document}

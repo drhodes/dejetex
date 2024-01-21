@@ -1,0 +1,784 @@
+% -*- latex -*-
+
+\documentclass[12pt]{article}
+
+% \usepackage{edXpsl}	% edX
+\usepackage{amsmath, amsthm, amsfonts, amssymb, color, mathrsfs}
+\usepackage{cancel}
+
+%------------------------------------------
+\parindent=0pt
+\parskip=1ex
+
+\begin{document}
+%-----------------------------------------------%
+
+\input{1802macros_edX.tex} %custom macros
+%these should not need to change for MITx Online
+
+\def\start{start="2023-09-06T15:00"}
+\def\courseend{end="[[course_end]]T16:00"}
+
+  % [[dateblock]]
+  
+% %%%UNIT 1
+   \def\firstdue{due="2023-09-20T15:00"}
+%   %\def\firstdue{due="2023-09-27T15:00"}
+%   %\def\firstdue{}
+
+% %%% UNIT 2
+   \def\seconddue{due="2023-10-11T15:00"}
+%   %\def\seconddue{due="2023-10-18T15:00"}
+%   %\def\seconddue{}
+
+% %%% UNIT 3
+   \def\thirddue{due="2023-11-01T15:00"}
+%   % \def\thirddue{due="2023-11-08T15:00"}
+%   %\def\thirddue{}
+  
+% %%%UNIT 4
+% %% has needed a second extension in the past
+   \def\fourthdue{due="2023-11-22T15:00"}
+%   %\def\fourthdue{due="2023-11-29T15:00"}
+%   %\def\fourthdue{}
+
+% %%%UNIT 5
+   \def\fifthdue{due="2023-12-13T15:00"}
+%   %\def\fifthdue{due="2023-12-20T15:00"}
+%   %\def\fifthdue{}
+
+  \def\examstart{start="2023-12-06T15:00"}
+  \def\examdue{due="2023-12-20T16:00"}
+  
+
+\begin{edXcourse}{18.02.1x}{"Multivariable Calculus 1: Vectors and Derivatives"}[semester="[[semester]]" info_sidebar_name="Related Links" display_coursenumber="18.02.1x" course_organization="MIT" end="[[course_end]]T16:00" \start ]
+  
+\begin{edXchapter}{Getting started}[url_name="unit0" \start ]
+
+\def\edxbaseoutputname{logistics}
+ 
+\beginedxsequential{Overview and logistics}{}
+   
+\input{gettingstarted/Logistics_1802.tex}
+   
+\endedxsequential
+
+
+
+\def\edxbaseoutputname{edxtutorial}
+ 
+\beginedxsequential{Orientation to problem types and platform}{}
+
+\input{gettingstarted/edxTutorial_1802.tex}
+ 
+\endedxsequential
+ 
+\def\edxbaseoutputname{forum}
+
+\beginedxsequential{Guidelines for using the forum}{}
+
+\input{gettingstarted/forum.tex}
+
+\endedxsequential
+ 
+\def\edxbaseoutputname{schedule}
+ 
+\beginedxsequential{Release schedule}{}
+ 
+\beginedxvertical{Release schedule}
+ 
+\beginedxtext{Schedule}
+
+\edXinclude{gettingstarted/schedule.xml}
+
+\endedxtext
+
+\endedxvertical
+ 
+\endedxsequential
+
+\def\edxbaseoutputname{entrancesurvey}
+
+\beginedxsequential{Entrance survey}{}
+
+\beginedxvertical{Entrance Survey}
+
+\beginedxtext{Entrance Survey}
+
+\edXinclude{surveys/entrance-1.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+ 
+\end{edXchapter} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{edXchapter}{Unit 1: Functions of two variables}[url_name="unit1" \start ]
+
+\def\edxbaseoutputname{levelcurves_partialderivs}
+
+\beginedxsequential{Lecture 1: Level curves and partial derivatives}{format="Lecture" graded="true" \firstdue }
+
+\input{unit1/lec1_levelcurves_partialderivs/lec0.tex}
+\input{unit1/lec1_levelcurves_partialderivs/lec0sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u1rec1}
+
+\bes{Recitation 1: Structured worked examples}{format="Recitation" graded="true" \firstdue }
+
+\input{unit1/lec1_levelcurves_partialderivs/rec0.tex}
+
+\ees
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\edxbaseoutputname{tangentplane}
+
+\beginedxsequential{Lecture 2: Linear approximations and tangent planes}{format="Lecture" graded="true" \firstdue }
+
+\input{unit1/lec2_tangentplane/lec1obj.tex}
+\input{unit1/lec2_tangentplane/lec1.tex}
+\input{unit1/lec2_tangentplane/lec1sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u1rec2}
+
+\bes{Recitation 2: Linear approximation and tangent plane problems}{format="Recitation" graded="true" \firstdue }
+
+\input{unit1/lec2_tangentplane/rec2.tex}
+
+\ees
+
+\def\edxbaseoutputname{slicing}
+
+\beginedxsequential{Lecture 3: Visualizing surfaces in three dimensions}{format="Lecture" graded="true" \firstdue }
+
+\input{unit1/lec3_slicing/lec3_obj.tex}
+\input{unit1/lec3_slicing/lec3_slicing.tex}
+\input{unit1/lec3_slicing/lec3_sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u1rec3}
+
+\bes{Recitation 3: Worked examples and practice}{format="Recitation" graded="true" \firstdue }
+
+\input{unit1/lec3_slicing/rec3.tex}
+
+\ees
+
+
+\def\edxbaseoutputname{ps_1A}
+
+\beginedxsequential{Problem Set 1A}{format="Problem Set A" graded="true" \firstdue }
+
+\input{unit1/psets/ps_unit1_partA.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{ps_1B}
+
+\beginedxsequential{Problem Set 1B}{format="Problem Set B" graded="true" \firstdue }
+
+\input{unit1/psets/ps_unit1_partB.tex}
+\input{unit1/psets/lec1supp.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{unit1_survey}
+
+\beginedxsequential{Rate this unit}{}
+
+\beginedxvertical{Unit 1 Feedback}
+
+\beginedxtext{Unit 1 Feedback}
+
+\edXinclude{surveys/unit1.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+
+\end{edXchapter}
+
+
+\begin{edXchapter}{Unit 2: Geometry of Derivatives}[url_name="unit2" \start ]
+
+\def\edxbaseoutputname{vectorsintro}
+
+\beginedxsequential{Lecture 4: Introduction to vectors and dot products}{format="Lecture" graded="true" \seconddue }
+
+\input{unit2/lec1_vectorsintro/lec2obj.tex}
+\input{unit2/lec1_vectorsintro/lec2_v3.tex}
+\input{unit2/lec1_vectorsintro/lec2sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u2rec1}
+
+\beginedxsequential{Recitation 4: Structured worked example}{format="Recitation" graded="true" \seconddue }
+
+\input{unit2/lec1_vectorsintro/rec3_vectorproblems.tex}
+
+\endedxsequential
+
+
+
+
+
+
+\def\edxbaseoutputname{morevectors}
+
+\beginedxsequential{Lecture 5: Finding vectors normal to level curves}{format="Lecture" graded="true" \seconddue }
+
+\input{unit2/lec2_morevectors/lec3obj.tex}
+\input{unit2/lec2_morevectors/lec3.tex}
+\input{unit2/lec2_morevectors/lec3sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u2rec2}
+
+\beginedxsequential{Recitation 5: Scaffolded worked example}{format="Recitation" graded="true" \seconddue }
+
+\input{unit2/lec2_morevectors/rec3.tex}
+
+\endedxsequential
+
+
+
+
+
+
+\def\edxbaseoutputname{gradient}
+
+\beginedxsequential{Lecture 6: Gradients}{format="Lecture" graded="true" \seconddue }
+
+\input{unit2/lec3_gradient/lec4obj.tex}
+\input{unit2/lec3_gradient/lec4.tex}
+\input{unit2/lec3_gradient/lec4sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u2rec3}
+
+\beginedxsequential{Recitation 6: Structured worked example}{format="Recitation" graded="true" \seconddue }
+
+\input{unit2/lec3_gradient/rec4.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{directionalderivs}
+
+\beginedxsequential{Lecture 7: Directional derivatives}{format="Lecture" graded="true" \seconddue }
+
+\input{unit2/lec4_directionalderivs/lec7obj.tex}
+\input{unit2/lec4_directionalderivs/lec7_directionalderivatives.tex}
+\input{unit2/lec4_directionalderivs/lec7sum.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{u2rec4}
+
+\beginedxsequential{Recitation 7: Practice with directional derivatives}{format="Recitation" graded="true" \seconddue }
+
+\input{unit2/lec4_directionalderivs/rec7.tex}
+
+\endedxsequential
+
+
+
+\def\edxbaseoutputname{ps_2A}
+
+\beginedxsequential{Problem Set 2A}{format="Problem Set A" graded="true" \seconddue }
+
+\input{unit2/psets/ps_unit2_partA.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{ps_2B}
+
+\beginedxsequential{Problem Set 2B}{format="Problem Set B" graded="true" \seconddue }
+
+\input{unit2/psets/ps_unit2_partB.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{unit2_survey}
+
+\beginedxsequential{Rate this unit}{}
+
+\beginedxvertical{Unit 2 Feedback}
+
+\beginedxtext{Unit 2 Feedback}
+
+\edXinclude{surveys/unit2.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+
+\end{edXchapter}
+
+
+
+\begin{edXchapter}{Unit 3: Optimization}[url_name="unit3" \start ]
+
+
+\def\edxbaseoutputname{u3lec1_criticalpoints}
+\beginedxsequential{Lecture 8: Critical points}{format="Lecture" graded="true" \thirddue }
+
+\input{unit3/lec1_criticalpoints/lec3_1obj.tex}
+\input{unit3/lec1_criticalpoints/u3lec1_criticalpoints.tex}
+\input{unit3/lec1_criticalpoints/lec3_1sum.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{u3rec1_practice}
+
+\beginedxsequential{Recitation 8: Critical point practice}{format="Recitation" graded="true" \thirddue }
+
+
+\input{unit3/lec1_criticalpoints/u3rec1_practice.tex}
+
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u3lec2_seconderivtest}
+\beginedxsequential{Lecture 9: Second derivative test}{format="Lecture" graded="true" \thirddue }
+
+\input{unit3/lec2_seconderivtest/lec3_2obj.tex}
+\input{unit3/lec2_seconderivtest/u3lec2_secondderivtest.tex}
+\input{unit3/lec2_seconderivtest/lec3_2sum.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{ru3rec2_secondertest}
+
+\beginedxsequential{Recitation 9: Second derivative test}{format="Recitation" graded="true" \thirddue }
+
+
+\input{unit3/lec2_seconderivtest/rec2_derivtest.tex}
+
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u3lec3_contrained_optimization}
+\beginedxsequential{Lecture 10: Constrained optimization}{format="Lecture" graded="true" \thirddue }
+
+\input{unit3/lec3_constrainedoptimization/lec6obj.tex}
+\input{unit3/lec3_constrainedoptimization/lec3_3_constrainedoptimization.tex}
+\input{unit3/lec3_constrainedoptimization/lec6sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u3rec3}
+
+\beginedxsequential{Recitation 10: Practice Optimization Problems}{format="Recitation" graded="true" \thirddue }
+
+\input{unit3/lec3_constrainedoptimization/unit3_rec3.tex}
+
+\endedxsequential
+
+
+
+\def\edxbaseoutputname{u3lec4_lagrangemultiplier}
+\beginedxsequential{Lecture 11: Lagrange Multipliers}{format="Lecture" graded="true" \thirddue }
+
+\input{unit3/lec4_lagrangemultiplier/lec6obj.tex}
+\input{unit3/lec4_lagrangemultiplier/lec6.tex}
+\input{unit3/lec4_lagrangemultiplier/lec6sum.tex}
+
+\endedxsequential
+
+
+
+\def\edxbaseoutputname{u3rec4}
+
+\beginedxsequential{Recitation 11: Practice with Lagrange Multiplier Problems}{format="Recitation" graded="true" \thirddue }
+
+\input{unit3/lec4_lagrangemultiplier/rec6.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u3lec5_leastsquares}
+
+\beginedxsequential{Lecture 12: Least squares approximation}{format="Lecture" graded="true" \thirddue }
+
+\input{unit3/lec5_leastsquares/lec8obj.tex}
+\input{unit3/lec5_leastsquares/lec8-leastsquares.tex}
+\input{unit3/lec5_leastsquares/lec8sum.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{u3lec5}
+
+\beginedxsequential{Recitation 12: Fitting a parabola to data}{format="Recitation" graded="true" \thirddue }
+
+\input{unit3/lec5_leastsquares/rec8.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{ps_3A}
+
+\beginedxsequential{Problem Set 3A}{format="Problem Set A" graded="true" \thirddue }
+
+\input{unit3/psets/ps_unit3_partA.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{ps_3B}
+
+\beginedxsequential{Problem Set 3B}{format="Problem Set B" graded="true" \thirddue }
+
+\input{unit3/psets/ps_unit3_partB.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{unit3_survey}
+
+\beginedxsequential{Rate this unit}{}
+
+\beginedxvertical{Unit 3 Feedback}
+
+\beginedxtext{Unit 3 Feedback}
+
+\edXinclude{surveys/unit3.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+
+\end{edXchapter}
+
+\begin{edXchapter}{Unit 4: Matrices and Linearization}[url_name="unit4" \start ]
+
+\begin{edXsection}{StaffOnly Testing Python}[url_name="pythonTest" visible_to_staff_only="true"]
+
+\input{unit4/python_testing.tex}
+
+\end{edXsection}
+
+\def\edxbaseoutputname{u4_lecture_matrices}
+\beginedxsequential{Lecture 13: Matrices}{graded="true" format="Lecture" \fourthdue }
+
+\input{unit4/lecture01_Matrices.tex}
+
+\endedxsequential 
+
+\def\edxbaseoutputname{u4_recitation_matrices}
+\beginedxsequential{Recitation 13: Matrices}{graded="true" format="Recitation" \fourthdue }
+
+\input{unit4/recitation01_Matrices.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{u4_lecture_systems}
+\beginedxsequential{Lecture 14: Solving Linear Systems}{graded="true" format="Lecture" \fourthdue }
+
+\input{unit4/lecture02_SolvingLinearSystems.tex}
+
+\endedxsequential 
+
+\def\edxbaseoutputname{u4_recitation_systems}
+\beginedxsequential{Recitation 14: Solving Linear Systems}{graded="true" format="Recitation" \fourthdue }
+
+\input{unit4/recitation02_SolvingLinearSystems.tex}
+
+\endedxsequential 
+
+\def\edxbaseoutputname{u4_lecture_linearization}
+\beginedxsequential{Lecture 15: Linearization}{graded="true" format="Lecture" \fourthdue }
+
+\input{unit4/lecture03_Linearization.tex}
+
+\endedxsequential 
+
+\def\edxbaseoutputname{u4_recitation_linearization}
+\beginedxsequential{Recitation 15: Linearization}{graded="true" format="Recitation" \fourthdue }
+
+\input{unit4/recitation03_Linearization.tex}
+
+\endedxsequential 
+
+\def\edxbaseoutputname{ps4A}
+\beginedxsequential{Problem Set 4A}{graded="true" format="Problem Set A" \fourthdue }
+
+\input{unit4/problemSetA.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{ps4B}
+\beginedxsequential{Problem Set 4B}{graded="true" format="Problem Set B" \fourthdue }
+
+\input{unit4/problemSetB.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{unit4_survey}
+
+\beginedxsequential{Rate this unit}{}
+
+\beginedxvertical{Unit 4 Feedback}
+
+\beginedxtext{Unit 4 Feedback}
+
+\edXinclude{surveys/unit4.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+
+\end{edXchapter}
+
+
+\begin{edXchapter}{Unit 5: Curves and Surfaces}[url_name="unit5" \start ]
+
+\def\edxbaseoutputname{u5lec1_3d}
+\beginedxsequential{Lecture 16: Functions of 3 variables}{format="Lecture" graded="true" \fifthdue }
+
+\input{unit5/functions_of_3vars/u5lec1obj.tex}
+\input{unit5/functions_of_3vars/u5lec1_3D.tex}
+\input{unit5/functions_of_3vars/u5lec1sum.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u5rec1}
+\beginedxsequential{Recitation 16: Practice with functions of 3 variables}{format="Recitation" graded="true" \fifthdue }
+
+\input{unit5/functions_of_3vars/u5rec1_practice.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{u5lec2}
+\beginedxsequential{Lecture 17: Parametric Curves}{format="Lecture" graded="true" \fifthdue }
+
+\input{unit5/lecture02_ParametricCurves.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{u5rec2}
+\beginedxsequential{Recitation 17: Parametric Curves}{format="Recitation" graded="true" \fifthdue }
+
+\input{unit5/recitation02_ParametricCurves.tex}
+
+\endedxsequential 
+
+\def\edxbaseoutputname{u5lec3}
+\beginedxsequential{Lecture 18: Differentials and Chain Rule}{format="Lecture" graded="true" \fifthdue }
+
+\input{unit5/lecture03_DifferentialsAndChainRule.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{u5rec3}
+\beginedxsequential{Recitation 18: Differentials and Chain Rule}{format="Recitation" graded="true" \fifthdue }
+
+\input{unit5/recitation03_DifferentialsAndChainRule.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{ps5A}
+\beginedxsequential{Problem Set 5A}{format="Problem Set A" graded="true" \fifthdue }
+
+\input{unit5/psets/u5_partA.tex}
+
+\endedxsequential
+
+
+\def\edxbaseoutputname{ps5B}
+\beginedxsequential{Problem Set 5B}{format="Problem Set B" graded="true" \fifthdue }
+
+\input{unit5/psets/u5_partB.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{unit5_survey}
+\beginedxsequential{Rate this unit}{}
+
+\beginedxvertical{Unit 5 Feedback}
+
+\beginedxtext{Unit 5 Feedback}
+
+\edXinclude{surveys/unit5.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+
+\end{edXchapter}
+
+  
+\begin{edXchapter}{Review}[url_name="unit6" \start ]
+
+\def\edxbaseoutputname{reviewcontents}
+\beginedxsequential{Contents overview, and links to practice problems}{}
+\beginedxvertical{Contents}
+\beginedxtext{Contents}
+
+The best way to prepare is to work through the practice exam problems
+and solutions. This section does not introduce any new content. We are
+providing opportunities for you to solve lots of problems, with
+solutions and prepare for the exam itself in the exam format you will
+experience during the exam.
+
+\mysubsection{Contents of this unit}
+
+\begin{enumerate}
+\item Links practice exams and solutions from OCW that you can use to
+  help self assess.
+\item An untimed practice exam to help familiarize you with the exam
+  format, and give you practice entering answers. (Don't forget about
+  the input help button!)
+\item Two lectures, Review 1 and Review 2, which review problems and
+  content from Units 1, 2, and 3. These are two lectures of review
+  that Prof. Guth gave before the first MIT exam. These review
+  lectures appear after the practice exams since we think that they
+  will offer more insight once you have done more problem solving.
+\end{enumerate}
+
+
+\endedxtext
+
+\endedxvertical
+
+\input{review/practiceExamsOCW.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{prac}
+
+\beginedxsequential{Practice exam (untimed, with solutions)}{format="Practice Exam"}
+
+\input{review/practice_exam.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{review1}
+\beginedxsequential{Review 1}{format="Review"}
+
+\input{review/review1.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{review2}
+\beginedxsequential{Review 2}{format="Review"}
+
+\input{review/review2.tex}
+
+\endedxsequential
+
+\def\edxbaseoutputname{exitsurvey}
+
+\beginedxsequential{Exit survey}{}
+
+\beginedxvertical{Exit Survey}
+
+\beginedxtext{Exit survey}
+
+Please reflect on your experience in this course. The information from this survey will be used to help improve future runs of this course!
+
+\endedxtext
+
+\beginedxtext{Exit Survey}
+
+\edXinclude{surveys/exit-1.xml}
+
+\endedxtext
+
+\endedxvertical
+
+\endedxsequential
+
+\end{edXchapter}
+
+  
+\begin{edXchapter}{Exam}[url_name="exam1" \examstart ]
+
+\def\edxbaseoutputname{honorcode}
+\beginedxsequential{Learner Agreement}{}
+
+\beginedxvertical{Learner Agreement}
+
+\beginedxproblem{Agreement}{weight="1"}
+
+By checking the box below, you are asserting the following:
+\begin{itemize}
+\item I will not give or receive any help on this exam.
+\item I will not present another's solutions or ideas as my own.
+\item I will not copy or present any portion of the problems from this exam in any online or in-person format.
+\end{itemize}
+
+\edXabox{type="oldmultichoice" expect="I agree","" options="I agree"}
+
+After submitting, click next to access the exam problems.
+
+\endedxproblem
+
+\endedxvertical
+
+\endedxsequential
+
+
+% \def\examparams{showanswer="attempted" rerandomize="onreset"} 
+
+\def\edxbaseoutputname{exam_test}
+\beginedxsequential{Exam (Untimed, Correctness Feedback)}{visible_to_staff_only="true"}
+
+%\input{exams/exam_021.tex}
+
+\endedxsequential
+
+% \def\examparams{showanswer="never" rerandomize="per_student"}
+
+\def\edxbaseoutputname{exam}
+\beginedxsequential{Exam (Timed, No Correctness Feedback)}{graded="true" format="Exam" default_time_limit_minutes="2880" exam_review_rules="" is_practice_exam="false" is_proctored_enabled="false" is_time_limited="true" hide_after_due="true" show_correctness="never" due="2023-12-20T16:00" visible_to_staff_only="false"} % template this visible to staff boolean
+
+\input{exams/exam_021.tex}
+
+\endedxsequential
+
+
+\end{edXchapter}
+
+\end{edXcourse}
+
+\end{document}

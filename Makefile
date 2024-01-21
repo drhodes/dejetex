@@ -59,17 +59,17 @@ ${PARSER_FILES}: venv ${GRAMMAR}.g4 ${GRAMMAR}Lexer.g4
 install: 
 	${VENV} pip install -e .
 
-test: ${PARSER_FILES} 
-	pytest --capture=no
+watch: ${PARSER_FILES}
+	${VENV} ptw -- --capture=no
+
+test: ${PARSER_FILES}
+	${VENV} pytest --capture=no
 
 tree: venv
 	${VENV} antlr4-parse -v ${ANTLR_VERSION} DejeTex.g4 DejeTexLexer.g4 ${RULE} tests/deje-tests/${TESTPROG} -trace -gui
 
-
-
 run: venv ${PARSER_FILES}
 	${PY} src/dejetex/main.py ${INFILE}
-
 
 .PHONY: clean-antlr
 clean-antlr: 
