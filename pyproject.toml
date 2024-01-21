@@ -4,24 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dejetex"
-authors = [
-    {name = "Derek Rhodes", email = "physci@gmail.com"},
-]
+authors = [ {name = "Derek Rhodes", email = "physci@gmail.com"} ]
 description = "A context free proper subset of tex"
 readme = "README.rst"
 requires-python = ">=3.7"
 keywords = []
 license = {text = "MIT"}
-classifiers = [
-    "Programming Language :: Python :: 3",
-]
+classifiers = [ "Programming Language :: Python :: 3" ]
 
 dependencies = [
-  "python-lsp-server",
-  "antlr4-tools",
-  "antlr4-python3-runtime==4.13.1",
-  "pytest",
-]
+             "python-lsp-server",
+             "antlr4-tools",
+             "antlr4-python3-runtime==4.13.1",
+             "pytest"
+             ]
 
 dynamic = ["version"]
 
