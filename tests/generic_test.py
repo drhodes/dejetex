@@ -85,9 +85,9 @@ def define_test(name):
     generic_test(inner, name)
     
 
-def mathmode_test(name):
+def mathmode_inline_test(name):
     def inner(parser):
-        tree = parser.mathmode()
+        tree = parser.mathmode_inline()
         if parser.getNumberOfSyntaxErrors() > 0:
             raise Exception("syntax errors")
         else:
