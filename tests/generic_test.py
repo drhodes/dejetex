@@ -84,3 +84,15 @@ def define_test(name):
             vinterp.visit(tree)
     generic_test(inner, name)
     
+
+def mathmode_test(name):
+    def inner(parser):
+        tree = parser.mathmode()
+        if parser.getNumberOfSyntaxErrors() > 0:
+            raise Exception("syntax errors")
+        else:
+            vinterp = DejeTexVisitor()
+            vinterp.visit(tree)
+    generic_test(inner, name)
+    
+    
