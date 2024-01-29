@@ -19,11 +19,11 @@ def parse(fname):
     parser = DejeTex(stream)
     tree = parser.program()
     if parser.getNumberOfSyntaxErrors() > 0:
-        print("syntax errors")
+        print(f"syntax errors: {fname}")
     else:
         # vinterp = DejeTexVisitor()
         # vinterp.visit(tree)
-        check(tree, tree)
+        # check(tree, tree)
         input_pass(tree, tree)
     
 def input_pass(text, tree):
