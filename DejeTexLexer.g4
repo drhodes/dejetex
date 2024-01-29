@@ -48,6 +48,7 @@ WS    : [ \t\n\r\f]+ -> channel(WHITESPACE_CHANNEL) ;
 PERCENT : '%' ;
 HASH : '#' ;
 BANG : '!';
+DOLLAR : '$';
 
 SingleLineComment
     : (PERCENT ~[\n]* | PERCENT [\n]) -> channel(HIDDEN);

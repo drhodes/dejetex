@@ -16,6 +16,7 @@ stmt
     | define
     | env
     | expr
+    | mathmode
     ;
 
 expr
@@ -31,6 +32,8 @@ expr
     | expr binop expr   
     | cmd
     ;
+
+mathmode : DOLLAR expr* DOLLAR;
 
 punc
     : COMMA
