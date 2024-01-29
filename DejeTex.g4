@@ -26,14 +26,25 @@ expr
     | STRING   
     | ID
     | NEWLINE
+    | TWOBACKSLASH
+    | AMP
+    | QMARK
     | input_cmd
     | param
     | LCURLY expr RCURLY
+    | LSLASHCURLY expr+ RSLASHCURLY
     | expr binop expr   
     | cmd
+        
     ;
 
-mathmode : DOLLAR expr* DOLLAR;
+mathmode
+    : mathmode_inline
+    | mathmode_display ;
+        
+mathmode_inline : DOLLAR expr* DOLLAR;
+mathmode_display : LSLASHBRACK expr* RSLASHBRACK;
+    
 
 punc
     : COMMA
