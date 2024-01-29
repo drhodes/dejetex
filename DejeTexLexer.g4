@@ -24,6 +24,13 @@ NEWCOMMAND : '\\newcommand' ;
 USEPACKAGE : '\\usepackage' ;
 INPUT : '\\input' ;
 DEF : '\\def' ;
+TWOBACKSLASH : '\\\\' ;
+
+LSLASHBRACK : '\\[' ;
+RSLASHBRACK : '\\]' ;
+
+LSLASHCURLY : '\\{' ;
+RSLASHCURLY : '\\}' ;                     
 
 
 ADD : '+' ;
@@ -49,6 +56,10 @@ PERCENT : '%' ;
 HASH : '#' ;
 BANG : '!';
 DOLLAR : '$';
+AMP : '&';
+QMARK : '?';
+
+
 
 SingleLineComment
     : (PERCENT ~[\n]* | PERCENT [\n]) -> channel(HIDDEN);
